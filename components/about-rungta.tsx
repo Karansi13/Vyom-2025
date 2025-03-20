@@ -37,7 +37,7 @@ export function AboutRungta() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="py-20 bg-gradient-to-b from-green-950 to-black">
+    <section ref={sectionRef} className="py-20 ">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div ref={imageRef} className="relative order-2 lg:order-1">

@@ -36,7 +36,7 @@ export function AboutVyom() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="py-20 bg-black">
+    <section ref={sectionRef} className="py-20 ">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div ref={textRef} className="space-y-6">

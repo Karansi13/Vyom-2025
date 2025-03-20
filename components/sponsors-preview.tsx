@@ -56,7 +56,7 @@ export function SponsorsPreview() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="py-16 bg-green-900/30">
+    <section ref={sectionRef} className="py-16">
       <div className="container mx-auto px-4">
         <div ref={titleRef} className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-amber-400 font-jumanji mb-4">OUR SPONSORS</h2>

@@ -124,7 +124,7 @@ export function FaqSection() {
   }, [openIndex])
 
   return (
-    <section ref={sectionRef} className="py-20 bg-gradient-to-b from-black to-green-950">
+    <section ref={sectionRef} className="py-20">
       <div className="container mx-auto px-4">
         <div ref={titleRef} className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-amber-400 font-jumanji mb-6">

@@ -80,7 +80,7 @@ export function EventsPreview() {
   ]
 
   return (
-    <section ref={sectionRef} className="py-20 bg-black">
+    <section ref={sectionRef} className="py-20">
       <div className="container mx-auto px-4">
         <div ref={titleRef} className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-amber-400 font-jumanji mb-6">EVENTS & CHALLENGES</h2>

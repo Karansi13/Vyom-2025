@@ -38,7 +38,7 @@ export default function EventsPage({
   })
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-green-900/90 to-green-950">
+    <div className="min-h-screen bg-gradient-to-b from-green-950 to-black">
       <div className="container mx-auto px-4 py-12">
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold text-amber-400 font-jumanji mb-4">EVENTS & CHALLENGES</h1>
