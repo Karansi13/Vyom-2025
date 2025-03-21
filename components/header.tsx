@@ -58,7 +58,9 @@ export function Header() {
               </Link>
             ))}
 
-            <Button className="bg-amber-600 hover:bg-amber-500 text-white rounded-full px-6">Register Now</Button>
+            <Link href="/events">
+              <Button className="bg-amber-600 hover:bg-amber-500 text-white rounded-full px-6">Register Now</Button>
+            </Link>
           </div>
 
           <button className="md:hidden" onClick={() => setIsOpen(!isOpen)} aria-label="Toggle menu">

@@ -104,7 +104,7 @@ export function FestHero() {
           <span className="text-amber-300 font-semibold">April 7-9, 2025</span>
         </p>
         <div ref={buttonContainerRef} className="flex flex-col sm:flex-row gap-4 justify-center opacity-0">
-          <Link href="/register">
+          <Link href="/events">
             <Button className="bg-amber-600 hover:bg-amber-500 text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg transition-all hover:scale-105">
               REGISTER NOW
             </Button>
