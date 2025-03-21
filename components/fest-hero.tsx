@@ -66,7 +66,7 @@ export function FestHero() {
             }}
           />
         )}
-        
+
         <video
           ref={videoRef}
           autoPlay
@@ -76,7 +76,7 @@ export function FestHero() {
           className={`absolute inset-0 w-full h-full object-cover opacity-[0.6] ${isVideoLoaded ? 'opacity-100' : 'opacity-0'} transition-opacity duration-1000`}
           preload="auto"
         >
-          <source  src="/videoplayback.mp4" type="video/mp4" />
+          <source src="/videoplayback.mp4" type="video/mp4" />
         </video>
       </div>
 
