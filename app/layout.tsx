@@ -13,7 +13,10 @@ export const metadata: Metadata = {
   title: "VYOM 2025 | College Annual Festival",
   description:
     "Join us for the most adventurous college fest of the year with a Jumanji theme. Explore events, merchandise, and more!",
-  keywords: "college fest, jumanji, events, cultural fest, technical events, sports events"
+  keywords: "college fest, jumanji, events, cultural fest, technical events, sports events",
+  icons: {
+    icon: "/favicon.ico",
+  },
 }
 
 export default function RootLayout({

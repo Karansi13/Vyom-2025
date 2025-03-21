@@ -35,16 +35,16 @@ export function Header() {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center space-x-2">
-            <div className="relative h-10 w-10">
+            <div className="relative h-12 w-16">
               <Image
-                src="/placeholder.svg?height=40&width=40"
+                src="/Vyom_Logo.png"
                 alt="VYOM Logo"
-                width={40}
-                height={40}
-                className="object-contain"
+                width={80}
+                height={50}
+                className="object-contain absolute inset-0 top-[-10px]"
               />
             </div>
-            <span className="font-jumanji text-2xl text-amber-400">VYOM</span>
+            {/* <span className="font-jumanji text-2xl text-amber-400">VYOM</span> */}
           </Link>
 
           <div className="hidden md:flex items-center space-x-8">
