@@ -1,41 +1,45 @@
-"use client"
+"use client";
 
-import { useEffect, useRef } from "react"
-import Link from "next/link"
-import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import { Download } from "lucide-react"
-import gsap from "gsap"
-import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { useEffect, useRef } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { Download } from "lucide-react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export function BrochurePreview() {
-  const sectionRef = useRef<HTMLElement>(null)
-  const imageRef = useRef<HTMLDivElement>(null)
-  const contentRef = useRef<HTMLDivElement>(null)
+  const sectionRef = useRef<HTMLElement>(null);
+  const imageRef = useRef<HTMLDivElement>(null);
+  const contentRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger)
+    gsap.registerPlugin(ScrollTrigger);
 
-    if (!sectionRef.current || !imageRef.current || !contentRef.current) return
+    if (!sectionRef.current || !imageRef.current || !contentRef.current) return;
 
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: sectionRef.current,
         start: "top 70%",
       },
-    })
+    });
 
-    tl.fromTo(imageRef.current, { x: -100, opacity: 0 }, { x: 0, opacity: 1, duration: 0.8 }).fromTo(
+    tl.fromTo(
+      imageRef.current,
+      { x: -100, opacity: 0 },
+      { x: 0, opacity: 1, duration: 0.8 }
+    ).fromTo(
       contentRef.current.querySelectorAll("h2, p, .button-container"),
       { y: 50, opacity: 0 },
       { y: 0, opacity: 1, stagger: 0.2, duration: 0.6 },
-      "-=0.4",
-    )
+      "-=0.4"
+    );
 
     return () => {
-      ScrollTrigger.getAll().forEach((t) => t.kill())
-    }
-  }, [])
+      ScrollTrigger.getAll().forEach((t) => t.kill());
+    };
+  }, []);
 
   return (
     <section ref={sectionRef} className="py-16">
@@ -56,10 +60,13 @@ export function BrochurePreview() {
           </div>
 
           <div ref={contentRef} className="space-y-6">
-            <h2 className="text-3xl md:text-4xl font-bold text-amber-400 font-jumanji">DOWNLOAD THE BROCHURE</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-amber-400 font-jumanji">
+              DOWNLOAD THE BROCHURE
+            </h2>
             <p className="text-gray-300">
-              Get all the details about VYOM 2025 in our comprehensive brochure. Find information about events,
-              schedules, venues, and more to plan your adventure.
+              Get all the details about VYOM 2025 in our comprehensive brochure.
+              Find information about events, schedules, venues, and more to plan
+              your adventure.
             </p>
             <p className="text-gray-300">The brochure includes:</p>
             <ul className="list-disc list-inside text-gray-300 space-y-2">
@@ -70,17 +77,22 @@ export function BrochurePreview() {
               <li>Important contacts and emergency information</li>
             </ul>
             <div className="button-container pt-4">
-              <Link href="/brochure">
-                <Button className="bg-amber-600 hover:bg-amber-700 text-white">
-                  <Download className="mr-2 h-4 w-4" />
-                  Download Brochure
-                </Button>
-              </Link>
+              <Button
+                className="bg-amber-600 hover:bg-amber-500 text-white rounded-full px-8 py-6 text-lg font-bold mt-6"
+                onClick={() => {
+                  const link = document.createElement("a");
+                  link.href = "/Brochure.pdf"; // Path to the uploaded file
+                  link.download = "VYOM25_Brochure.pdf"; // Sets the download filename
+                  link.click();
+                }}
+              >
+                <Download className="mr-2 h-5 w-5" />
+                Download Brochure (PDF)
+              </Button>
             </div>
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }
-
