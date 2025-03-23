@@ -55,34 +55,34 @@ export function FestHero() {
   return (
     <div
       ref={heroRef}
-      className="relative min-h-[80vh] flex items-center justify-center overflow-hidden select-none"
+      className="relative h-screen flex items-center justify-center overflow-hidden select-none -top-[5.5rem]"
     >
       <div className="absolute inset-0">
         {!isVideoLoaded && (
           <div
-            className="absolute inset-0 bg-cover bg-center"
+            className="absolute inset-0 bg-cover bg-center opacity-80"
             style={{
-              backgroundImage: "url('/placeholder.svg?height=1080&width=1920')",
+              backgroundImage: "url('https://wallpapercat.com/w/full/4/3/b/2086080-3840x2160-desktop-4k-jumanji-welcome-to-the-jungle-background-image.jpg')",
             }}
           />
         )}
 
-        <video
+        {/* <video
           ref={videoRef}
           autoPlay
           muted
           loop
           playsInline
-          className={`absolute inset-0 h-full w-full object-cover opacity-[0.6] ${isVideoLoaded ? 'opacity-100' : 'opacity-0'} transition-opacity duration-1000`}
+          className={`absolute inset-0 h-full w-full -top-[1.5rem] object-cover opacity-[0.6] ${isVideoLoaded ? 'opacity-100' : 'opacity-0'} transition-opacity duration-1000`}
           preload="auto"
         >
           <source src="/videoplayback.mp4" type="video/mp4" />
-        </video>
+        </video> */}
       </div>
 
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 text-center">
+      <div className="relative top-6 z-10 container mx-auto px-4 text-center">
         <h1 ref={rungtaRef} className="text-white text-xl md:text-4xl font-bold tracking-wider mb-4 opacity-0">
           RUNGTA EDUCATIONAL FOUNDATION
         </h1>

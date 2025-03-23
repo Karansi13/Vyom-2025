@@ -30,7 +30,7 @@ export function Header() {
 
   return (
     <header
-      className={`sticky mt-2 top-0 z-50 transition-all duration-300 ${isScrolled ? "backdrop-blur-lg shadow-md border rounded-lg top-3 transition-all m-4" : " top-3 bg-transparent border rounded-lg m-4"}`}
+      className={`sticky z-50 transition-all duration-300 ml-4 mr-4 mt-2 bg-blur ${isScrolled ? "bg-blur m-4 bg-transparent rounded-lg top-3 transition-all" : "bg-transparent"}`}
     >
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
@@ -71,7 +71,7 @@ export function Header() {
 
       {/* Mobile menu */}
       {isOpen && (
-        <div className="md:hidden bg-black/95 backdrop-blur-md">
+        <div className="md:hidden bg-black/95 backdrop-blur-md top-10">
           <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
             {navLinks.map((link) => (
               <Link
