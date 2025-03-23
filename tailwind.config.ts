@@ -76,6 +76,9 @@ const config = {
     },
   },
   plugins: [require("tailwindcss-animate")],
+  corePlugins: {
+    transform: true, // ✅ Ensure transform is enabled!
+  },
 } satisfies Config
 
 export default config
