@@ -30,7 +30,7 @@ export function Header() {
 
   return (
     <header
-      className={`sticky mt-2 top-0 z-50 transition-all duration-300 ${isScrolled ? " bg-[#042512] backdrop-blur-lg shadow-md border rounded-lg top-3 transition-all m-4" : " top-3 bg-transparent border rounded-lg m-4"}`}
+      className={`sticky mt-2 top-0 z-50 transition-all duration-300 ${isScrolled ? "backdrop-blur-lg shadow-md border rounded-lg top-3 transition-all m-4" : " top-3 bg-transparent border rounded-lg m-4"}`}
     >
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
