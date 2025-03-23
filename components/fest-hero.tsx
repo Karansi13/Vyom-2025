@@ -73,7 +73,7 @@ export function FestHero() {
           muted
           loop
           playsInline
-          className={`absolute inset-0 w-full h-full object-cover opacity-[0.6] ${isVideoLoaded ? 'opacity-100' : 'opacity-0'} transition-opacity duration-1000`}
+          className={`absolute inset-0 h-full w-full object-cover opacity-[0.6] ${isVideoLoaded ? 'opacity-100' : 'opacity-0'} transition-opacity duration-1000`}
           preload="auto"
         >
           <source src="/videoplayback.mp4" type="video/mp4" />
@@ -99,7 +99,7 @@ export function FestHero() {
           THE JUMANJI EXPERIENCE
         </h2>
         <p ref={dateRef} className="text-xl md:text-2xl text-white mb-8 max-w-3xl mx-auto opacity-0">
-          Enter a world of adventure at our annual tech fest.
+          Enter a world of adventure at our annual tech fest .
           <br />
           <span className="text-amber-300 font-semibold">April 7-9, 2025</span>
         </p>
@@ -112,7 +112,7 @@ export function FestHero() {
           <Link href="/events">
             <Button
               variant="outline"
-              className="border-amber-400 text-amber-400 hover:bg-amber-400/10 font-bold py-3 px-8 rounded-full text-lg shadow-lg transition-all hover:scale-105"
+              className="border -amber-400 text-amber-400 hover:bg-amber-400/10 font-bold py-3 px-8 rounded-full text-lg shadow-lg transition-all hover:scale-105"
             >
               EXPLORE EVENTS
             </Button>
