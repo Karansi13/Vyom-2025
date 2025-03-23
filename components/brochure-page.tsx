@@ -5,6 +5,7 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Download, FileText, Calendar, MapPin, Users } from "lucide-react"
 import gsap from "gsap"
+import Link from "next/link"
 
 export function BrochurePage() {
   const pageRef = useRef<HTMLDivElement>(null)
@@ -102,10 +103,12 @@ export function BrochurePage() {
               </li>
             </ul>
 
-            <Button className="bg-amber-600 hover:bg-amber-500 text-white rounded-full px-8 py-6 text-lg font-bold mt-6">
-              <Download className="mr-2 h-5 w-5" />
-              Download Brochure (PDF)
-            </Button>
+            <a href="/Brochure.pdf" download="Brochure.pdf" className="no-underline">
+              <Button className="bg-amber-600 hover:bg-amber-500 text-white rounded-full px-8 py-6 text-lg font-bold mt-6 flex items-center">
+                <Download className="mr-2 h-5 w-5" />
+                Download Brochure (PDF)
+              </Button>
+            </a>
           </div>
         </div>
 

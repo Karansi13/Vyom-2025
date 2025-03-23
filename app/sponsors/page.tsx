@@ -1,12 +1,16 @@
-import type { Metadata } from "next"
-import { SponsorsPage } from "@/components/sponsors-page"
+"use client";
 
-export const metadata: Metadata = {
-  title: "Sponsors | VYOM 2025",
-  description: "Meet the sponsors who make VYOM 2025 possible. Learn about partnership opportunities.",
-}
+import { useState, useEffect } from "react";
+import { SponsorsPage } from "@/components/sponsors-page";
+import Loader from "@/components/Loader";
 
 export default function Sponsors() {
-  return <SponsorsPage />
-}
+  const [loader, setLoader] = useState(true);
 
+  useEffect(() => {
+    const timer = setTimeout(() => setLoader(false), 500);
+    return () => clearTimeout(timer);
+  }, []);
+
+  return loader ? <Loader /> : <SponsorsPage />;
+}
