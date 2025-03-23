@@ -1,23 +1,23 @@
-"use client"
+"use client";
 
-import { useEffect, useRef } from "react"
-import Link from "next/link"
-import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { ArrowRight } from "lucide-react"
-import gsap from "gsap"
-import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { useEffect, useRef } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { ArrowRight } from "lucide-react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export function EventsPreview() {
-  const sectionRef = useRef<HTMLElement>(null)
-  const titleRef = useRef<HTMLDivElement>(null)
-  const cardsRef = useRef<HTMLDivElement>(null)
+  const sectionRef = useRef<HTMLElement>(null);
+  const titleRef = useRef<HTMLDivElement>(null);
+  const cardsRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger)
+    gsap.registerPlugin(ScrollTrigger);
 
-    if (!sectionRef.current || !titleRef.current || !cardsRef.current) return
+    if (!sectionRef.current || !titleRef.current || !cardsRef.current) return;
 
     // Animate title
     gsap.fromTo(
@@ -32,11 +32,11 @@ export function EventsPreview() {
           trigger: titleRef.current,
           start: "top 80%",
         },
-      },
-    )
+      }
+    );
 
     // Animate cards
-    const cards = cardsRef.current.querySelectorAll(".event-card")
+    const cards = cardsRef.current.querySelectorAll(".event-card");
     gsap.fromTo(
       cards,
       { y: 100, opacity: 0 },
@@ -50,13 +50,13 @@ export function EventsPreview() {
           trigger: cardsRef.current,
           start: "top 70%",
         },
-      },
-    )
+      }
+    );
 
     return () => {
-      ScrollTrigger.getAll().forEach((t) => t.kill())
-    }
-  }, [])
+      ScrollTrigger.getAll().forEach((t) => t.kill());
+    };
+  }, []);
 
   const eventCategories = [
     {
@@ -77,22 +77,29 @@ export function EventsPreview() {
       description: "Adventure sports, team games, and athletic competitions",
       color: "from-red-600 to-red-900",
     },
-  ]
+  ];
 
   return (
     <section ref={sectionRef} className="py-20">
       <div className="container mx-auto px-4">
         <div ref={titleRef} className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-amber-400 font-jumanji mb-6">EVENTS & CHALLENGES</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-amber-400 font-jumanji mb-6">
+            EVENTS & CHALLENGES
+          </h2>
           <p className="text-gray-200 max-w-3xl mx-auto text-lg">
-            Embark on an adventure through our diverse range of events. From technical challenges to cultural
-            performances and thrilling sports competitions.
+            Embark on an adventure through our diverse range of events. From
+            technical challenges to cultural performances and thrilling sports
+            competitions.
           </p>
         </div>
 
         <div ref={cardsRef} className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {eventCategories.map((category, index) => (
-            <Link href={`/events?category=${category.title.toLowerCase()}`} key={index} className="event-card group">
+            <Link
+              href={`/events?category=${category.title.toLowerCase()}`}
+              key={index}
+              className="event-card group"
+            >
               <Card className="overflow-hidden bg-black/60 border-amber-700/30 hover:border-amber-500 transition-all duration-500 hover:shadow-xl hover:shadow-amber-900/20 group-hover:-translate-y-4">
                 <div className="relative h-56 overflow-hidden">
                   <Image
@@ -111,7 +118,9 @@ export function EventsPreview() {
                   </div>
                 </div>
                 <CardContent className="p-6 bg-gradient-to-b from-black to-green-950">
-                  <p className="text-gray-200 mb-4 group-hover:text-white transition-colors">{category.description}</p>
+                  <p className="text-gray-200 mb-4 group-hover:text-white transition-colors">
+                    {category.description}
+                  </p>
                   <div className="flex items-center text-amber-400 font-medium group-hover:translate-x-2 transition-transform duration-300">
                     <span>Explore Events</span>
                     <ArrowRight className="ml-2 h-4 w-4 group-hover:ml-3 transition-all" />
@@ -131,6 +140,5 @@ export function EventsPreview() {
         </div>
       </div>
     </section>
-  )
+  );
 }
-

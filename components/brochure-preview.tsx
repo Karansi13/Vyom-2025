@@ -109,7 +109,15 @@ export function BrochurePreview() {
               to plan your VYOM experience. Download it to get access to:
             </p>
 
-            <Button className="bg-amber-600 hover:bg-amber-500 text-white rounded-full px-8 py-6 text-lg font-bold mt-6">
+            <Button
+              className="bg-amber-600 hover:bg-amber-500 text-white rounded-full px-8 py-6 text-lg font-bold mt-6"
+              onClick={() => {
+                const link = document.createElement("a");
+                link.href = "/Brochure.pdf"; // Path to the uploaded file
+                link.download = "VYOM25_Brochure.pdf"; // Sets the download filename
+                link.click();
+              }}
+            >
               <Download className="mr-2 h-5 w-5" />
               Download Brochure (PDF)
             </Button>
