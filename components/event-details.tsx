@@ -57,13 +57,12 @@ export function EventDetails({ event }: EventDetailsProps) {
   return (
     <div className="container mx-auto px-4 py-12">
       <div ref={headerRef} className="mb-8">
-        <Link href="/events" className="text-amber-400 hover:underline mb-4 inline-block">
+        <Link href="/events" className="text-red-400 hover:underline mb-4 inline-block font-vintage">
           ← Back to Events
         </Link>
-        <h1 className="text-3xl md:text-5xl font-bold text-amber-400 font-jumanji mb-4">{event.title}</h1>
+        <h1 className="text-3xl md:text-5xl font-bold text-red-400 font-stranger stranger-flicker mb-4">{event.title}</h1>
         <div className="flex flex-wrap gap-3 mb-6">
-          <span className="bg-amber-600 text-white px-3 py-1 rounded-full text-sm font-bold">{event.category}</span>
-          <span className="bg-green-800 text-white px-3 py-1 rounded-full text-sm">{event.registrationFee}</span>
+          <span className="bg-red-600 text-white px-3 py-1 rounded-full font-bold font-nav tracking-widest text-[0.9rem]">{event.category}</span>
         </div>
       </div>
 
@@ -74,76 +73,68 @@ export function EventDetails({ event }: EventDetailsProps) {
           </div>
 
           <div ref={contentRef} className="space-y-8">
-            <Card className="bg-green-900/50 border-amber-700/30 animate-item">
+            <Card className="bg-red-900/50 border-red-700/30 animate-item">
               <CardContent className="p-6">
-                <h2 className="text-2xl font-bold text-amber-400 mb-4">Event Description</h2>
-                <p className="text-gray-300">{event.description}</p>
+                <h2 className="text-2xl font-bold text-red-400 mb-4 font-nav tracking-widest">Event Description</h2>
+                <p className="text-gray-300 font-desc text-lg">{event.description}</p>
               </CardContent>
             </Card>
 
-            <Card className="bg-green-900/50 border-amber-700/30 animate-item">
+            <Card className="bg-red-900/50 border-red-700/30 animate-item">
               <CardContent className="p-6">
-                <h2 className="text-2xl font-bold text-amber-400 mb-4">Prizes</h2>
-                <ul className="space-y-2">
-                  {event.prizes.map((prize, index) => (
-                    <li key={index} className="flex items-start">
-                      <Award className="h-5 w-5 mr-2 text-amber-400 mt-0.5" />
-                      <span className="text-gray-300">{prize}</span>
-                    </li>
-                  ))}
-                </ul>
+                <h2 className="text-2xl font-bold text-red-400 mb-4 font-nav tracking-widest">Rules</h2>
+                <span className="text-gray-300 font-desc text-lg">{event.rules}</span>
               </CardContent>
             </Card>
 
-            <Card className="bg-green-900/50 border-amber-700/30 animate-item">
+            <Card className="bg-red-900/50 border-red-700/30 animate-item">
               <CardContent className="p-6">
-                <h2 className="text-2xl font-bold text-amber-400 mb-4">Contact Information</h2>
                 <div className="space-y-3">
-                  <p className="text-gray-300">
-                    <span className="font-semibold">Contact Person:</span> {event.contactPerson.name}
-                  </p>
-                  <div className="flex items-center">
-                    <Mail className="h-5 w-5 mr-2 text-amber-400" />
-                    <a href={`mailto:${event.contactPerson.email}`} className="text-amber-400 hover:underline">
-                      {event.contactPerson.email}
-                    </a>
-                  </div>
-                  <div className="flex items-center">
-                    <Phone className="h-5 w-5 mr-2 text-amber-400" />
-                    <a href={`tel:${event.contactPerson.phone}`} className="text-amber-400 hover:underline">
-                      {event.contactPerson.phone}
-                    </a>
-                  </div>
+                  <h2 className="text-2xl font-bold text-red-400 mb-4 font-nav tracking-widest">Contact Information</h2>
+                  {event.contactPerson.map((person, index) => (
+                    <div key={index} className="space-y-2 flex items-center gap-4">
+                      <p className="text-gray-300">
+                        <span className="font-semibold font-desc text-lg">{person.name}</span>
+                      </p>
+                      <div className="flex items-center">
+                        <Phone className="h-5 w-5 mr-2 text-red-400" />
+                        <span className="text-red-400 hover:underline font-desc text-lg">
+                          {person.phone}
+                        </span>
+                      </div>
+                    </div>
+                  ))}
                 </div>
+
               </CardContent>
             </Card>
           </div>
         </div>
 
         <div>
-          <Card className="bg-green-900/50 border-amber-700/30 sticky top-24 animate-item">
+          <Card className="bg-red-900/50 border-red-700/30 sticky top-24 animate-item">
             <CardContent className="p-6">
-              <h2 className="text-2xl font-bold text-amber-400 mb-4">Event Details</h2>
+              <h2 className="text-2xl font-bold text-red-400 mb-4 font-nav tracking-widest">Event Details</h2>
 
               <div className="space-y-4 mb-6">
                 <div className="flex items-start">
-                  <Calendar className="h-5 w-5 mr-3 text-amber-400 mt-0.5" />
-                  <div>
+                  <Calendar className="h-5 w-5 mr-3 text-red-400 mt-0.5" />
+                  <div className="font-desc">
                     <p className="font-semibold text-white">Date</p>
                     <p className="text-gray-300">{event.date}</p>
                   </div>
                 </div>
 
-                <div className="flex items-start">
-                  <Clock className="h-5 w-5 mr-3 text-amber-400 mt-0.5" />
+                {/* <div className="flex items-start">
+                  <Clock className="h-5 w-5 mr-3 text-red-400 mt-0.5" />
                   <div>
                     <p className="font-semibold text-white">Time</p>
                     <p className="text-gray-300">{event.time}</p>
                   </div>
-                </div>
+                </div> */}
 
                 <div className="flex items-start">
-                  <MapPin className="h-5 w-5 mr-3 text-amber-400 mt-0.5" />
+                  <MapPin className="h-5 w-5 mr-3 text-red-400 mt-0.5" />
                   <div>
                     <p className="font-semibold text-white">Venue</p>
                     <p className="text-gray-300">{event.venue}</p>
@@ -151,29 +142,24 @@ export function EventDetails({ event }: EventDetailsProps) {
                 </div>
 
                 <div className="flex items-start">
-                  <Users className="h-5 w-5 mr-3 text-amber-400 mt-0.5" />
+                  <Users className="h-5 w-5 mr-3 text-red-400 mt-0.5" />
                   <div>
                     <p className="font-semibold text-white">Team Size</p>
                     <p className="text-gray-300">{event.teamSize}</p>
                   </div>
                 </div>
 
-                <div className="flex items-start">
-                  <DollarSign className="h-5 w-5 mr-3 text-amber-400 mt-0.5" />
-                  <div>
-                    <p className="font-semibold text-white">Registration Fee</p>
-                    <p className="text-gray-300">{event.registrationFee}</p>
-                  </div>
-                </div>
-              </div>
 
-              <Button
-                className="w-full bg-amber-600 hover:bg-amber-700 text-white"
-                onClick={handleRegister}
-                disabled={isRegistering}
-              >
-                {isRegistering ? "Processing..." : "Register Now"}
-              </Button>
+              </div>
+              <a href="https://forms.gle/nBmvNreAnNQcAmAY7" target="_blank">
+                <Button
+                  className="w-full bg-red-600 hover:bg-red-700 text-white font-nav tracking-widest text-xl stranger-flicker"
+                  onClick={handleRegister}
+                  disabled={isRegistering}
+                >
+                  {isRegistering ? "Processing..." : "Register Now"}
+                </Button>
+              </a>
             </CardContent>
           </Card>
         </div>

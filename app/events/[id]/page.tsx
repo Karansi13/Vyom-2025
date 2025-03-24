@@ -33,7 +33,7 @@ export default function EventPage({ params }: EventPageProps) {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-green-900/90 to-green-950">
+    <div className="min-h-screen ">
       <EventDetails event={event} />
     </div>
   )

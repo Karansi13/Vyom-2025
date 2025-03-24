@@ -4,128 +4,174 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 20 14.3% 4.1%;
-    --card: 0 0% 100%;
-    --card-foreground: 20 14.3% 4.1%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 20 14.3% 4.1%;
-    --primary: 47.9 95.8% 53.1%;
-    --primary-foreground: 26 83.3% 14.1%;
-    --secondary: 60 4.8% 95.9%;
-    --secondary-foreground: 24 9.8% 10%;
-    --muted: 60 4.8% 95.9%;
-    --muted-foreground: 25 5.3% 44.7%;
-    --accent: 60 4.8% 95.9%;
-    --accent-foreground: 24 9.8% 10%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 60 9.1% 97.8%;
-    --border: 20 5.9% 90%;
-    --input: 20 5.9% 90%;
-    --ring: 35.5 91.7% 32.9%;
-    --radius: 0.5rem;
-  }
+    --background: 0 0% 3%;
+    --foreground: 0 0% 98%;
 
-  .dark {
-    --background: 120 50% 5%;
-    --foreground: 60 9.1% 97.8%;
-    --card: 120 45% 8%;
-    --card-foreground: 60 9.1% 97.8%;
-    --popover: 120 45% 8%;
-    --popover-foreground: 60 9.1% 97.8%;
-    --primary: 47.9 95.8% 53.1%;
-    --primary-foreground: 26 83.3% 14.1%;
-    --secondary: 120 40% 15%;
-    --secondary-foreground: 60 9.1% 97.8%;
-    --muted: 120 40% 15%;
-    --muted-foreground: 24 5.3% 75%;
-    --accent: 120 40% 15%;
-    --accent-foreground: 60 9.1% 97.8%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 60 9.1% 97.8%;
-    --border: 120 40% 15%;
-    --input: 120 40% 15%;
-    --ring: 35.5 91.7% 32.9%;
+    --card: 0 0% 5%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 5%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 85% 45%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 220 85% 45%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 65%;
+
+    --accent: 0 85% 45%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 85% 45%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 0 85% 45%;
+
+    --radius: 0.5rem;
   }
 }
 
 @layer base {
-  * {
-    @apply border-border;
-  }
   body {
     @apply bg-background text-foreground;
   }
 }
 
-@font-face {
-  font-family: "Jumanji";
-  src: url("/fonts/jumanji.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+/* Stranger Things style text */
+.font-stranger {
+  font-family: "Playfair Display", serif;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-shadow: 0 0 15px rgba(220, 38, 38, 0.7);
+  text-transform: uppercase;
 }
 
-.font-jumanji {
-  font-family: "Jumanji", sans-serif;
+/* Horror style text */
+.font-horror {
+  font-family: "Creepster", cursive;
   letter-spacing: 0.05em;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-/* Parallax Effect */
-.parallax {
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+/* Secondary horror font */
+.font-horror-alt {
+  font-family: "Nosifer", cursive;
 }
 
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-  width: 10px;
+/* Vintage text */
+.font-vintage {
+  font-family: "Special Elite", cursive;
 }
 
-::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.8);
+/* Flickering animation */
+@keyframes flicker {
+  0%,
+  19.999%,
+  22%,
+  62.999%,
+  64%,
+  64.999%,
+  70%,
+  100% {
+    opacity: 0.99;
+    filter: drop-shadow(0 0 1px rgba(255, 255, 255, 0.7));
+  }
+  20%,
+  21.999%,
+  63%,
+  63.999%,
+  65%,
+  69.999% {
+    opacity: 0.4;
+    filter: none;
+  }
 }
 
-::-webkit-scrollbar-thumb {
-  background: rgba(217, 119, 6, 0.7);
-  border-radius: 5px;
+.animate-flicker {
+  animation: flicker 2s linear infinite;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: rgba(217, 119, 6, 0.9);
-}
-
-/* Animations */
+/* Floating particles animation */
 @keyframes float {
   0% {
-    transform: translateY(0px);
+    transform: translateY(0) translateX(0);
+    opacity: 0.2;
   }
   50% {
-    transform: translateY(-20px);
+    transform: translateY(-20px) translateX(10px);
+    opacity: 0.7;
   }
   100% {
-    transform: translateY(0px);
+    transform: translateY(0) translateX(0);
+    opacity: 0.2;
   }
 }
 
 .animate-float {
-  animation: float 6s ease-in-out infinite;
+  animation: float 8s ease-in-out infinite;
 }
 
-/* Improved text readability */
-p {
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+/* Blood drip animation */
+@keyframes drip {
+  0% {
+    height: 0;
+    opacity: 0.9;
+  }
+  100% {
+    height: var(--drip-height, 100px);
+    opacity: 0.7;
+  }
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+.animate-drip {
+  animation: drip 2s ease-in forwards;
 }
 
+.upside-down {
+  transform: rotate(180deg);
+  /* filter: sepia(50%) hue-rotate(140deg) ; */
+}
+
+.stranger-flicker {
+  animation: flicker 5s infinite alternate;
+}
+
+.stranger-flicker-slow {
+  animation: flicker 8s infinite alternate;
+}
+
+@keyframes flicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    opacity: 1;
+    text-shadow: 0 0 20px rgba(255, 0, 0, 0.7), 0 0 30px rgba(255, 0, 0, 0.5);
+  }
+  20%, 24%, 55% {
+    opacity: 0.5;
+    text-shadow: none;
+  }
+}
+
+.vine-border {
+  position: relative;
+  border: none !important;
+}
+
+.vine-border::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cpath d='M10,10 Q30,5 50,10 T90,10 M90,90 Q70,95 50,90 T10,90 M10,10 Q5,30 10,50 T10,90 M90,10 Q95,30 90,50 T90,90' stroke='rgba(200, 20, 20, 0.4)' fill='none' stroke-width='1'/%3E%3C/svg%3E");
+  background-size: 100px 100px;
+  background-repeat: repeat;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+  border-radius: inherit;
+}

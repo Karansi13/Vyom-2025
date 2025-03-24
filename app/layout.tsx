@@ -1,19 +1,30 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
+// import { Inter } from "next/font/google"
 import "./globals.css"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { ThemeProvider } from "@/components/theme-provider"
 import { SoundProvider } from "@/components/sound-provider"
+import './globals.css'
+import SmoothScrollProvider from "@/components/SmoothScrollProvider"
 
-const inter = Inter({ subsets: ["latin"] })
+// const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "VYOM 2025 | College Annual Festival",
+  title: "Vyom 2025 - The Upside Down Awaits | Annual Fest",
   description:
-    "Join us for the most adventurous college fest of the year with a Jumanji theme. Explore events, merchandise, and more!",
-  keywords: "college fest, jumanji, events, cultural fest, technical events, sports events",
+  "Enter the world of Vyom 2025, an annual fest inspired by Stranger Things! Experience mind-bending events, thrilling competitions, and a journey to the Upside Down. Join us now!",
+keywords: [
+  "Vyom 2025",
+  "annual fest",
+  "Stranger Things theme",
+  "college fest",
+  "events",
+  "competitions",
+  "Upside Down",
+  "sci-fi festival",
+],
   icons: {
     icon: "/favicon.ico",
   },
@@ -24,14 +35,29 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
+
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
+      \<head>
+        {/* Google Fonts Embedding */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Special+Elite&family=Creepster&family=Nosifer&display=swap"
+          rel="stylesheet"
+        />
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Creepster&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet"
+        />
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Creepster&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet"></link>
+      </head>
+      <body>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           <SoundProvider>
             <div className="flex min-h-screen flex-col">
               <Header />
-              <div className="flex-1">{children}</div>
+            <SmoothScrollProvider>
+              <div className="flex-1"> {children}</div>
+            </SmoothScrollProvider>
               <Footer />
             </div>
           </SoundProvider>
@@ -43,4 +69,3 @@ export default function RootLayout({
 
 
 
-import './globals.css'

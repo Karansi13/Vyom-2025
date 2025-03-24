@@ -8,129 +8,44 @@ export interface Event {
   description: string
   image: string
   registrationFee: string
-  prizes: string[]
+  rules: string
   teamSize: string
   contactPerson: {
     name: string
-    email: string
     phone: string
-  }
+    email?: string
+  }[]
 }
+
 
 export const eventsData: Event[] = [
   {
-    id: "tech-hackathon",
-    title: "Jungle Code Hackathon",
-    category: "Technical",
-    date: "April 7, 2025",
+    id: "box-cricket",
+    title: "BOX CRICKET",
+    category: "Sports",
+    date: "March 26, 2025",
     time: "9:00 AM - 9:00 PM",
-    venue: "Tech Pavilion",
+    venue: "In front of Central Library",
     description:
-      "A 12-hour coding challenge where teams compete to build innovative solutions for real-world problems. Navigate through coding challenges like you're navigating through a jungle.",
-    image: "/placeholder.svg?height=400&width=600",
+      "🏏 Vyom '25 Box Cricket Competition - Registration Form 🏆\n\n📅 Starting Date: 26th March 2025\n📍 Venue: In front of Central Library\n\nGet ready to hit the ground running at the Vyom '25 Box Cricket Competition! Lace up your shoes, grab your bat, and join us for an action-packed day of thrilling box cricket matches. Show off your skills, strategize with your team, and experience the excitement of this offline sporting event. Don't miss out on the chance to be part of this unforgettable day of competition and camaraderie!\n\n",
+    image: "/events/box-cricket.png",
     registrationFee: "$20 per team",
-    prizes: ["First Prize: $1000", "Second Prize: $500", "Third Prize: $250"],
-    teamSize: "2-4 members",
-    contactPerson: {
-      name: "Alex Johnson",
-      email: "alex@jumanjifest.com",
-      phone: "+1 (123) 456-7890",
+    rules: "Team Composition & Eligibility:\n✅ Each team must consist of 8 players (5 Boys + 3 Girls).\n\n✅ Teams must be formed within the same college (RCET, RCPSR, RIPER & GDRCST). No cross-college teams are allowed.\n✅ No restrictions on branch, semester, or year.\n✅ One player can only play for one team. If a player is found playing for multiple teams, both teams will be disqualified (applies to both men and women).\n✅ Each team can have a maximum of 3 players who have represented the University/College team.\n✅ No substitutes for either boys or girls.\n✅ Proper sportswear is mandatory (Shoes, T-Shirt, Lower).\n\n🏟 Playing Area & Rules:\n✔ Box cricket is played in a confined space, not on a full-sized cricket field.\n✔ The playing area is marked by boundaries to denote runs and limits.\n✔ No hit-wicket rule for girls.\n✔ First over must be bowled by a girl.\n✔ At least one girl must take strike during batting.\n✔ Full-arm bowling is mandatory for boys.\n✔ No restrictions on bowling action for girls.\n✔ The bowler must stand inside the designated box while delivering the ball, with no additional steps allowed.\n✔ Second bouncer in an over will be considered a No Ball.\n✔ If the ball passes over the boundary/fence, the batsman is out (except in case of a No Ball or Free Hit).\n✔ No Ball rules will follow International Cricket standards.\n✔ No extra runs for Byes & Leg Byes.\n✔ No Ball and Wide Ball = 1 extra run.\n✔ Rules can be modified by higher authorities during the match if necessary.\n\n⏳ Overs Format:\n📌 Matches will be played with a limited number of overs per side (typically 4 overs per innings, subject to format and time availability).\n\n👨‍⚖ Umpires & Fair Play Rules:\n✔ Matches will be officiated by one or two umpires, depending on availability.\n✔ The umpire’s decision is final. Arguing with the umpire may lead to team disqualification.\n✔ Good sportsmanship & fair play are expected from all participants.\n\n",
+    teamSize: "8 members",
+    contactPerson: [
+    {
+      name: "Vipul",
+      phone: "9798274596",
     },
-  },
-  {
-    id: "tech-ctf",
-    title: "Treasure Hunt CTF",
-    category: "Technical",
-    date: "April 8, 2025",
-    time: "10:00 AM - 6:00 PM",
-    venue: "Cyber Arena",
-    description:
-      "A Capture The Flag competition with a Jumanji twist. Hunt for digital treasures while solving complex cybersecurity challenges.",
-    image: "/placeholder.svg?height=400&width=600",
-    registrationFee: "$15 per team",
-    prizes: ["First Prize: $800", "Second Prize: $400", "Third Prize: $200"],
-    teamSize: "1-3 members",
-    contactPerson: {
-      name: "Samantha Lee",
-      email: "samantha@jumanjifest.com",
-      phone: "+1 (123) 456-7891",
+    {
+      name: "Praveen",
+      phone: "8253075416",
     },
-  },
-  {
-    id: "cultural-dance",
-    title: "Tribal Dance Competition",
-    category: "Cultural",
-    date: "April 8, 2025",
-    time: "5:00 PM - 8:00 PM",
-    venue: "Main Stage",
-    description:
-      "Showcase your dance skills in this high-energy competition inspired by tribal and jungle themes. Solo and group performances welcome.",
-    image: "/placeholder.svg?height=400&width=600",
-    registrationFee: "$10 per participant",
-    prizes: ["First Prize: $600", "Second Prize: $300", "Third Prize: $150"],
-    teamSize: "1-8 members",
-    contactPerson: {
-      name: "Michael Chen",
-      email: "michael@jumanjifest.com",
-      phone: "+1 (123) 456-7892",
+    {
+      name: "Aditya raj",
+      phone: "9234578690",
     },
+  ]
   },
-  {
-    id: "cultural-music",
-    title: "Jungle Beat Music Festival",
-    category: "Cultural",
-    date: "April 9, 2025",
-    time: "6:00 PM - 10:00 PM",
-    venue: "Amphitheater",
-    description:
-      "A music competition featuring original compositions and performances inspired by jungle rhythms and natural sounds.",
-    image: "/placeholder.svg?height=400&width=600",
-    registrationFee: "$15 per participant/band",
-    prizes: ["First Prize: $700", "Second Prize: $350", "Third Prize: $175"],
-    teamSize: "1-6 members",
-    contactPerson: {
-      name: "Priya Patel",
-      email: "priya@jumanjifest.com",
-      phone: "+1 (123) 456-7893",
-    },
-  },
-  {
-    id: "sports-obstacle",
-    title: "Jumanji Obstacle Course",
-    category: "Sports",
-    date: "April 7-9, 2025",
-    time: "11:00 AM - 4:00 PM",
-    venue: "Adventure Field",
-    description:
-      "Navigate through a challenging obstacle course inspired by the dangers of Jumanji. Test your strength, agility, and teamwork.",
-    image: "/placeholder.svg?height=400&width=600",
-    registrationFee: "$25 per team",
-    prizes: ["First Prize: $1200", "Second Prize: $600", "Third Prize: $300"],
-    teamSize: "4 members",
-    contactPerson: {
-      name: "David Wilson",
-      email: "david@jumanjifest.com",
-      phone: "+1 (123) 456-7894",
-    },
-  },
-  {
-    id: "sports-climbing",
-    title: "Rock Climbing Challenge",
-    category: "Sports",
-    date: "April 8, 2025",
-    time: "9:00 AM - 3:00 PM",
-    venue: "Climbing Wall",
-    description:
-      "Scale the heights in this rock climbing competition. Multiple difficulty levels available for beginners to experts.",
-    image: "/placeholder.svg?height=400&width=600",
-    registrationFee: "$12 per participant",
-    prizes: ["First Prize: $500", "Second Prize: $250", "Third Prize: $125"],
-    teamSize: "Individual",
-    contactPerson: {
-      name: "Sarah Johnson",
-      email: "sarah@jumanjifest.com",
-      phone: "+1 (123) 456-7895",
-    },
-  },
-]
+ ]
 

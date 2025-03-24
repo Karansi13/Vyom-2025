@@ -15,7 +15,7 @@ interface EventsFilterProps {
 }
 
 export function EventsFilter({ initialCategory = "all", initialSearch = "" }: EventsFilterProps) {
-  const [category, setCategory] = useState(initialCategory)
+  const [category, setCategory] = useState("all")
   const [searchTerm, setSearchTerm] = useState(initialSearch)
   const router = useRouter()
   const pathname = usePathname()
@@ -52,18 +52,18 @@ export function EventsFilter({ initialCategory = "all", initialSearch = "" }: Ev
 
   return (
     <div className="mb-8 space-y-4">
-      <Tabs defaultValue={category} onValueChange={handleCategoryChange} className="w-full">
-        <TabsList className="grid grid-cols-4 mb-4 bg-green-900/50">
-          <TabsTrigger value="all" className="data-[state=active]:bg-amber-600">
+      <Tabs defaultValue={category} onValueChange={handleCategoryChange} className="w-full font-nav tracking-widest">
+        <TabsList className="grid grid-cols-4 mb-4 bg-red-900/50">
+          <TabsTrigger value="all" className="data-[state=active]:bg-red-600">
             All
           </TabsTrigger>
-          <TabsTrigger value="technical" className="data-[state=active]:bg-amber-600">
+          <TabsTrigger value="technical" className="data-[state=active]:bg-red-600">
             Technical
           </TabsTrigger>
-          <TabsTrigger value="cultural" className="data-[state=active]:bg-amber-600">
+          <TabsTrigger value="cultural" className="data-[state=active]:bg-red-600">
             Cultural
           </TabsTrigger>
-          <TabsTrigger value="sports" className="data-[state=active]:bg-amber-600">
+          <TabsTrigger value="sports" className="data-[state=active]:bg-red-600">
             Sports
           </TabsTrigger>
         </TabsList>
@@ -76,7 +76,7 @@ export function EventsFilter({ initialCategory = "all", initialSearch = "" }: Ev
           placeholder="Search events..."
           value={searchTerm}
           onChange={handleSearchChange}
-          className="pl-10 bg-green-900/30 border-amber-700/30 focus:border-amber-500"
+          className="pl-10 bg-red-900/30 border-red-700/30 focus:border-red-500"
         />
         {searchTerm && (
           <Button

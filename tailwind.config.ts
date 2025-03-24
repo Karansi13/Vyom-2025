@@ -1,6 +1,6 @@
 import type { Config } from "tailwindcss"
 
-const config = {
+const config: Config = {
   darkMode: ["class"],
   content: [
     "./pages/**/*.{ts,tsx}",
@@ -9,7 +9,6 @@ const config = {
     "./src/**/*.{ts,tsx}",
     "*.{js,ts,jsx,tsx,mdx}",
   ],
-  prefix: "",
   theme: {
     container: {
       center: true,
@@ -73,10 +72,18 @@ const config = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      fontFamily: {
+        stranger: ["'Playfair Display'", "serif"],
+        horror: ["'Creepster'", "cursive"],
+        "horror-alt": ["'Nosifer'", "cursive"],
+        vintage: ["'Special Elite'", "cursive"],
+        nav: ["'Bebas Neue'", "sans-serif"],
+        desc: ["'Winky Sans'", "sans-serif"],
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],
-} satisfies Config
+}
 
 export default config
 
