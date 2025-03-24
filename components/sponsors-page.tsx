@@ -68,19 +68,13 @@ export function SponsorsPage() {
       description: "Our main partners who make VYOM'25 possible",
       sponsors: [
         {
-          name: "TechGiant Inc.",
-          logo: "/placeholder-logo.svg",
+          name: "Coming Soon",
+          logo: "/7.png",
           description:
-            "Leading technology company specializing in innovative solutions",
+            "Leading company",
           website: "https://example.com",
         },
-        {
-          name: "Global Innovations",
-          logo: "/placeholder-logo.svg",
-          description:
-            "Pioneering research and development in multiple tech domains",
-          website: "https://example.com",
-        },
+       
       ],
     },
     {
@@ -88,23 +82,13 @@ export function SponsorsPage() {
       description: "Major contributors to our festival's success",
       sponsors: [
         {
-          name: "Future Systems",
-          logo: "/placeholder-logo.svg",
-          description: "Next-generation computing and AI solutions",
+          name: "Coming Soon",
+          logo: "/7.png",
+          description:
+            "Leading company",
           website: "https://example.com",
         },
-        {
-          name: "Digital Dynamics",
-          logo: "/placeholder-logo.svg",
-          description: "Digital transformation and software development",
-          website: "https://example.com",
-        },
-        {
-          name: "Tech Ventures",
-          logo: "/placeholder-logo.svg",
-          description: "Venture capital firm focusing on emerging technologies",
-          website: "https://example.com",
-        },
+       
       ],
     },
     {
@@ -112,29 +96,13 @@ export function SponsorsPage() {
       description: "Valuable partners supporting our events and activities",
       sponsors: [
         {
-          name: "CodeCraft",
-          logo: "/placeholder-logo.svg",
-          description: "Software development and coding education",
+          name: "Coming Soon",
+          logo: "/7.png",
+          description:
+            "Leading company",
           website: "https://example.com",
         },
-        {
-          name: "Innovate Labs",
-          logo: "/placeholder-logo.svg",
-          description: "Research and innovation in technology",
-          website: "https://example.com",
-        },
-        {
-          name: "DataSphere",
-          logo: "/placeholder-logo.svg",
-          description: "Big data analytics and visualization",
-          website: "https://example.com",
-        },
-        {
-          name: "CloudPeak",
-          logo: "/placeholder-logo.svg",
-          description: "Cloud infrastructure and services",
-          website: "https://example.com",
-        },
+      
       ],
     },
   ];
@@ -149,7 +117,7 @@ export function SponsorsPage() {
         ref={heroRef}
         className="relative h-[50vh] flex items-center justify-center"
         style={{
-          backgroundImage: "url('/placeholder.svg?height=800&width=1600')",
+          backgroundImage: "url('/7.png?height=800&width=1600')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -192,16 +160,16 @@ export function SponsorsPage() {
                   whileTap={{ scale: 0.9, rotate: -5 }}
                   transition={{ duration: 0.4 }}
                 >
-                  <Card className="bg-black/60 border-red-700/30 hover:border-red-500 transition-all duration-300 hover:shadow-xl hover:shadow-red-900/20 overflow-hidden">
-                    <div className="relative h-40 bg-white/5 flex items-center justify-center p-6">
-                      <Image
-                        src={sponsor.logo || "/placeholder-logo.svg"}
-                        alt={sponsor.name}
-                        width={160}
-                        height={80}
-                        className="max-h-24 w-auto object-contain"
-                      />
-                    </div>
+                <Card className="bg-black/60 border-red-700/30 hover:border-red-500 transition-all duration-300 hover:shadow-xl hover:shadow-red-900/20 overflow-hidden">
+  <div className="relative h-52 bg-white/5 flex items-center justify-center p-6">
+    <Image
+      src={sponsor.logo || "/placeholder-logo.svg"}
+      alt={sponsor.name}
+      width={160}
+      height={80}
+      className="h-full w-auto object-contain"
+    />
+  </div>
                     <CardContent className="p-6">
                       <h3 className="text-xl font-bold text-red-300 mb-2">
                         {sponsor.name}

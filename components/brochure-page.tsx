@@ -52,7 +52,7 @@ export function BrochurePage() {
       {/* ✅ Hero Section */}
       <div
         ref={heroRef}
-        className="relative h-[50vh] flex items-center justify-center bg-[url('/placeholder.svg?height=800&width=1600')] bg-cover bg-center"
+        className="relative h-[50vh] flex items-center justify-center bg-[url('/6.png?height=800&width=1600')] bg-cover bg-center"
       >
         <div className="absolute inset-0 bg-black/70 backdrop-blur-md"></div>
         <div className="relative z-10 text-center">
@@ -72,7 +72,7 @@ export function BrochurePage() {
           <div className="animate-item hover:scale-110 hover:rotate-2 transition-transform duration-300 ease-in-out">
             <div className="relative h-[600px] w-full shadow-lg rounded-xl overflow-hidden">
               <Image
-                src="/placeholder.svg?height=800&width=600"
+                src="/6.png?height=800&width=600"
                 alt="VYOM Brochure Cover"
                 fill
                 className="object-contain"
@@ -129,7 +129,7 @@ export function BrochurePage() {
 
             {/* 🔥 Download Brochure Button */}
             <a
-              href="/Brochure.pdf"
+              href="/Brochure"
               download="Brochure.pdf"
               className="no-underline"
             >

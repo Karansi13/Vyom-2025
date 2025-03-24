@@ -9,6 +9,7 @@ interface EventPageProps {
   }
 }
 
+// Generate metadata dynamically for SEO
 export async function generateMetadata({ params }: EventPageProps): Promise<Metadata> {
   const event = eventsData.find((event) => event.id === params.id)
 
@@ -25,6 +26,13 @@ export async function generateMetadata({ params }: EventPageProps): Promise<Meta
   }
 }
 
+// ✅ Fix: Generate static paths for all events
+export async function generateStaticParams() {
+  return eventsData.map((event) => ({
+    id: event.id, // Ensure each event has a unique ID
+  }))
+}
+
 export default function EventPage({ params }: EventPageProps) {
   const event = eventsData.find((event) => event.id === params.id)
 
@@ -33,9 +41,8 @@ export default function EventPage({ params }: EventPageProps) {
   }
 
   return (
-    <div className="min-h-screen ">
+    <div className="min-h-screen">
       <EventDetails event={event} />
     </div>
   )
 }
-

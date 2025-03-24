@@ -61,19 +61,19 @@ export function EventsPreview() {
   const eventCategories = [
     {
       title: "Technical",
-      image: "/placeholder.svg?height=300&width=400",
+      image: "/1.png?height=300&width=400",
       description: "Coding competitions, hackathons, and tech workshops",
       color: "from-blue-600 to-blue-900",
     },
     {
       title: "Cultural",
-      image: "/placeholder.svg?height=300&width=400",
+      image: "/2.png?height=300&width=400",
       description: "Music, dance, drama, and art competitions",
       color: "from-purple-600 to-purple-900",
     },
     {
       title: "Sports",
-      image: "/placeholder.svg?height=300&width=400",
+      image: "/3.png?height=300&width=400",
       description: "Adventure sports, team games, and athletic competitions",
       color: "from-red-600 to-red-900",
     },

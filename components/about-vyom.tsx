@@ -42,9 +42,7 @@ export function AboutVyom() {
           <div ref={textRef} className="space-y-6">
             <h2 className="text-4xl tracking-widest md:text-5xl font-bold text-red-400 font-horror stranger-flicker">What is Vyom?</h2>
             <p className="text-gray-200 text-lg leading-relaxed font-vintage">
-              VYOM'25 is the upcoming inaugural tech fest conducted by Rungta Educational Foundation. It is an exciting
-              adventure created to inspire the creativity and passion of tech enthusiasts in India. Inviting students
-              from all over the Rungta Institution to join in a celebration of technology, creativity, and teamwork.
+            VYOM'25 is the annual fest organized by Rungta Educational Foundation. It is an exhilarating adventure designed to ignite creativity and passion among students. The fest welcomes students from across Rungta Institutions to partake in a grand celebration of technology, sports, and cultural activities.
             </p>
             <p className="text-gray-200 text-lg leading-relaxed font-vintage">
               The three-day event encompasses activities such as Hackathons, Cultural programs, Sports events and
@@ -59,10 +57,10 @@ export function AboutVyom() {
 
           <div ref={imageRef} className="relative">
             <div className="relative h-[400px] w-full rounded-lg overflow-hidden shadow-2xl shadow-red-600/20 transform rotate-2">
-              <Image src="/placeholder.svg?height=400&width=600" alt="VYOM Tech Fest" fill className="object-cover" />
+              <Image src="/4.png?height=400&width=600" alt="VYOM Tech Fest" fill className="object-cover" />
             </div>
             <div className="absolute -bottom-6 -left-6 bg-red-600 text-white p-4 rounded-lg shadow-lg transform -rotate-6">
-              <span className="font-stranger text-xl">VYOM 2025</span>
+              <span className="font-stranger text-xl">VYOM 2024</span>
             </div>
           </div>
         </div>

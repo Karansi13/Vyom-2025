@@ -30,28 +30,20 @@ export function FaqSection() {
     {
       question: "Who can participate in VYOM?",
       answer:
-        "The fest is primarily open to students from all Rungta Institutions. However, certain events may be open to students from other colleges as well. Check the specific event details for eligibility criteria.",
+        "The fest is primarily open to students from all Rungta Institutions. Check the specific event details for eligibility criteria.",
     },
     {
       question: "How can I register for VYOM?",
       answer:
         "You can register through our website by clicking the 'Register Now' button. Registration can be done for individual events or for the entire fest, depending on your interests.",
     },
-    {
-      question: "Is there a registration fee?",
-      answer:
-        "Yes, there is a nominal registration fee that varies depending on the events you wish to participate in. Early bird discounts are available for registrations before March 1, 2025.",
-    },
+   
     {
       question: "Can I form a team with students from different colleges?",
       answer:
         "For most team events, team members should be from the same institution. However, some events may allow mixed teams. Please check the specific event rules for details.",
     },
-    {
-      question: "Will accommodation be provided for outstation participants?",
-      answer:
-        "Yes, limited accommodation facilities will be available for outstation participants on a first-come, first-served basis. You can request accommodation during the registration process.",
-    },
+
     {
       question: "How can I purchase official merchandise?",
       answer:
