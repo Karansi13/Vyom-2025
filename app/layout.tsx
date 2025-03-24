@@ -38,7 +38,7 @@ export default function RootLayout({
 
   return (
     <html lang="en" suppressHydrationWarning>
-      \<head>
+      <head>
         {/* Google Fonts Embedding */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
