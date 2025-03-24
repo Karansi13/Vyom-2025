@@ -41,7 +41,7 @@ export function AboutRungta() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div ref={imageRef} className="relative order-2 lg:order-1">
-            <div className="relative h-[400px] w-full rounded-lg overflow-hidden shadow-2xl shadow-amber-600/20 transform -rotate-2">
+            <div className="relative h-[400px] w-full rounded-lg overflow-hidden shadow-2xl shadow-red-600/20 transform -rotate-2">
               <Image
                 src="/placeholder.svg?height=400&width=600"
                 alt="Rungta Educational Foundation"
@@ -49,20 +49,20 @@ export function AboutRungta() {
                 className="object-cover"
               />
             </div>
-            <div className="absolute -top-6 -right-6 bg-amber-600 text-white p-4 rounded-lg shadow-lg transform rotate-6">
-              <span className="font-jumanji text-xl">EXCELLENCE</span>
+            <div className="absolute -top-6 -right-6 bg-red-600 text-white p-4 rounded-lg shadow-lg transform rotate-6">
+              <span className="font-stranger text-xl">EXCELLENCE</span>
             </div>
           </div>
 
           <div ref={textRef} className="space-y-6 order-1 lg:order-2">
-            <h2 className="text-4xl md:text-5xl font-bold text-amber-400 font-jumanji">About Rungta</h2>
-            <p className="text-gray-200 text-lg leading-relaxed">
+            <h2 className="text-4xl md:text-6xl font-bold text-red-400 font-horror stranger-flicker">About Rungta</h2>
+            <p className="text-gray-200 text-lg leading-relaxed font-vintage">
               Santosh Rungta Group of Institutions, Bhilai is an Epitome of Success, A temple of knowledge that
               inculcates excellence in its students, through a meticulously designed process, wherein its ensured that
               all students graduate with futuristic skills, stay ahead of times and are way ahead in terms of their
               technical and professional competency.
             </p>
-            <p className="text-gray-200 text-lg leading-relaxed">
+            <p className="text-gray-200 text-lg leading-relaxed font-vintage">
               With state-of-the-art facilities and a commitment to academic excellence, Rungta Educational Foundation
               has established itself as a premier institution for higher education in the region.
             </p>

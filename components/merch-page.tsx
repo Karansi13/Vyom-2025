@@ -134,7 +134,7 @@ export function MerchPage() {
       >
         <div className="absolute inset-0 bg-black/70"></div>
         <div className="relative z-10 text-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-amber-400 font-jumanji mb-4">OFFICIAL MERCHANDISE</h1>
+          <h1 className="text-5xl md:text-7xl font-bold text-red-400 font-stranger mb-4">OFFICIAL MERCHANDISE</h1>
           <p className="text-xl text-white max-w-2xl mx-auto">
             Take home a piece of the adventure with our exclusive VYOM Jumanji collection
           </p>
@@ -148,12 +148,12 @@ export function MerchPage() {
           ))}
         </div>
 
-        <div className="mt-16 bg-black/60 border border-amber-700/30 rounded-xl p-8 text-center">
-          <h2 className="text-2xl font-bold text-amber-400 font-jumanji mb-4">PRE-ORDER NOW</h2>
+        <div className="mt-16 bg-black/60 border border-red-700/30 rounded-xl p-8 text-center">
+          <h2 className="text-2xl font-bold text-red-400 font-stranger mb-4">PRE-ORDER NOW</h2>
           <p className="text-gray-200 mb-6">
             Pre-order your merchandise now and pick it up at the festival. Limited quantities available!
           </p>
-          <Button className="bg-amber-600 hover:bg-amber-500 text-white rounded-full px-8 py-4 text-lg font-bold">
+          <Button className="bg-red-600 hover:bg-red-500 text-white rounded-full px-8 py-4 text-lg font-bold">
             <ShoppingBag className="mr-2 h-5 w-5" />
             View Shopping Cart
           </Button>
@@ -170,7 +170,7 @@ function MerchItemCard({ item }: { item: MerchItem }) {
   const decreaseQuantity = () => setQuantity((prev) => (prev > 1 ? prev - 1 : 1))
 
   return (
-    <Card className="merch-item bg-black/60 border-amber-700/30 hover:border-amber-500 transition-all duration-300 hover:shadow-xl hover:shadow-amber-900/20 overflow-hidden group">
+    <Card className="merch-item bg-black/60 border-red-700/30 hover:border-red-500 transition-all duration-300 hover:shadow-xl hover:shadow-red-900/20 overflow-hidden group">
       <div className="relative h-64 bg-black/50 overflow-hidden">
         <Image
           src={item.image || "/placeholder.svg"}
@@ -180,7 +180,7 @@ function MerchItemCard({ item }: { item: MerchItem }) {
         />
       </div>
       <CardContent className="p-6">
-        <h3 className="text-xl font-bold text-amber-300 mb-2">{item.name}</h3>
+        <h3 className="text-xl font-bold text-red-300 mb-2">{item.name}</h3>
         <p className="text-white font-bold mb-2">{item.price}</p>
         <p className="text-gray-300 text-sm mb-4 line-clamp-2">{item.description}</p>
 
@@ -221,7 +221,7 @@ function MerchItemCard({ item }: { item: MerchItem }) {
             </button>
           </div>
 
-          <Button className="bg-amber-600 hover:bg-amber-500 text-white">Add to Cart</Button>
+          <Button className="bg-red-600 hover:bg-red-500 text-white">Add to Cart</Button>
         </div>
       </CardContent>
     </Card>

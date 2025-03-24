@@ -142,7 +142,7 @@ export function SponsorsPage() {
   return (
     <div
       ref={pageRef}
-      className="min-h-screen bg-gradient-to-b from-green-950 to-black"
+      className="min-h-screen bg-black"
     >
       {/* Hero Section */}
       <div
@@ -156,10 +156,10 @@ export function SponsorsPage() {
       >
         <div className="absolute inset-0 bg-black/70"></div>
         <div className="relative z-10 text-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-amber-400 font-jumanji mb-4">
+          <h1 className="text-4xl md:text-6xl font-bold text-red-400 font-stranger stranger-flicker mb-4">
             OUR SPONSORS
           </h1>
-          <p className="text-xl text-white max-w-2xl mx-auto">
+          <p className="text-xl text-white max-w-2xl mx-auto font-vintage">
             VYOM'25 is made possible by the generous support of our sponsors
           </p>
         </div>
@@ -168,7 +168,7 @@ export function SponsorsPage() {
         {sponsorCategories.map((category, index) => (
           <div key={index} className="sponsor-category mb-20">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-amber-400 font-jumanji mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-red-400 font-stranger mb-4">
                 {category.title}
               </h2>
               <p className="text-gray-200 max-w-2xl mx-auto">
@@ -192,7 +192,7 @@ export function SponsorsPage() {
                   whileTap={{ scale: 0.9, rotate: -5 }}
                   transition={{ duration: 0.4 }}
                 >
-                  <Card className="bg-black/60 border-amber-700/30 hover:border-amber-500 transition-all duration-300 hover:shadow-xl hover:shadow-amber-900/20 overflow-hidden">
+                  <Card className="bg-black/60 border-red-700/30 hover:border-red-500 transition-all duration-300 hover:shadow-xl hover:shadow-red-900/20 overflow-hidden">
                     <div className="relative h-40 bg-white/5 flex items-center justify-center p-6">
                       <Image
                         src={sponsor.logo || "/placeholder-logo.svg"}
@@ -203,7 +203,7 @@ export function SponsorsPage() {
                       />
                     </div>
                     <CardContent className="p-6">
-                      <h3 className="text-xl font-bold text-amber-300 mb-2">
+                      <h3 className="text-xl font-bold text-red-300 mb-2">
                         {sponsor.name}
                       </h3>
                       <p className="text-gray-300 text-sm mb-4">
@@ -214,7 +214,7 @@ export function SponsorsPage() {
                           href={sponsor.website}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center text-amber-400 hover:text-amber-300 transition-colors"
+                          className="inline-flex items-center text-red-400 hover:text-red-300 transition-colors"
                         >
                           Visit Website{" "}
                           <ExternalLink className="ml-2 h-4 w-4" />
@@ -228,8 +228,8 @@ export function SponsorsPage() {
           </div>
         ))}
 
-        <div className="bg-black/60 border border-amber-700/30 rounded-xl p-8 text-center mt-12">
-          <h2 className="text-2xl font-bold text-amber-400 font-jumanji mb-4">
+        <div className="bg-black/60 border border-red-700/30 rounded-xl p-8 text-center mt-12">
+          <h2 className="text-2xl font-bold text-red-400 font-stranger mb-4">
             BECOME A SPONSOR
           </h2>
           <p className="text-gray-200 mb-6 max-w-3xl mx-auto">
@@ -237,7 +237,7 @@ export function SponsorsPage() {
             opportunities that can help your brand connect with tech
             enthusiasts, students, and professionals.
           </p>
-          <Button className="bg-amber-600 hover:bg-amber-500 text-white rounded-full px-8 py-4 text-lg font-bold">
+          <Button className="bg-red-600 hover:bg-red-500 text-white rounded-full px-8 py-4 text-lg font-bold">
             <Mail className="mr-2 h-5 w-5" />
             Contact for Sponsorship
           </Button>

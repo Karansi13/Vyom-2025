@@ -12,42 +12,42 @@ export function BrochurePage() {
   const heroRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    if (!pageRef.current || !heroRef.current || !contentRef.current) return;
+  // useEffect(() => {
+  //   if (!pageRef.current || !heroRef.current || !contentRef.current) return;
 
-    const tl = gsap.timeline();
+  //   const tl = gsap.timeline();
 
-    // 🎯 Hero Section Animation — Fade in with scale-up and slight rotation
-    tl.fromTo(
-      heroRef.current,
-      { opacity: 0, scale: 0.8, rotate: -5 },
-      { opacity: 1, scale: 1, rotate: 0, duration: 1.2, ease: "power2.out" }
-    );
+  //   // 🎯 Hero Section Animation — Fade in with scale-up and slight rotation
+  //   tl.fromTo(
+  //     heroRef.current,
+  //     { opacity: 0, scale: 0.8, rotate: -5 },
+  //     { opacity: 1, scale: 1, rotate: 0, duration: 1.2, ease: "power2.out" }
+  //   );
 
-    // 🔥 Content Section Animation — Staggered slide-in
-    tl.fromTo(
-      contentRef.current.querySelectorAll(".animate-item"),
-      { y: 50, opacity: 0 },
-      { y: 0, opacity: 1, stagger: 0.2, duration: 0.8, ease: "power2.out" }
-    );
+  //   // 🔥 Content Section Animation — Staggered slide-in
+  //   tl.fromTo(
+  //     contentRef.current.querySelectorAll(".animate-item"),
+  //     { y: 50, opacity: 0 },
+  //     { y: 0, opacity: 1, stagger: 0.2, duration: 0.8, ease: "power2.out" }
+  //   );
 
-    // 🌟 Parallax effect on hero background
-    gsap.to(heroRef.current, {
-      backgroundPosition: "center 20%",
-      scrollTrigger: {
-        trigger: heroRef.current,
-        start: "top top",
-        scrub: true,
-      },
-    });
+  //   // 🌟 Parallax effect on hero background
+  //   gsap.to(heroRef.current, {
+  //     backgroundPosition: "center 20%",
+  //     scrollTrigger: {
+  //       trigger: heroRef.current,
+  //       start: "top top",
+  //       scrub: true,
+  //     },
+  //   });
 
-    return () => tl.kill();
-  }, []);
+  //   return () => tl.kill();
+  // }, []);
 
   return (
     <div
       ref={pageRef}
-      className="min-h-screen bg-gradient-to-b from-green-950 to-black"
+      className="min-h-screen bg-black"
     >
       {/* ✅ Hero Section */}
       <div
@@ -56,10 +56,10 @@ export function BrochurePage() {
       >
         <div className="absolute inset-0 bg-black/70 backdrop-blur-md"></div>
         <div className="relative z-10 text-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-amber-400 font-jumanji mb-4 drop-shadow-lg animate-pulse">
-            🌟 OFFICIAL BROCHURE 🌟
+          <h1 className="text-4xl md:text-6xl font-bold text-red-400 font-stranger stranger-flicker mb-4">
+             OFFICIAL BROCHURE 
           </h1>
-          <p className="text-xl text-gray-200 max-w-2xl mx-auto tracking-wide">
+          <p className="text-xl text-gray-200 max-w-2xl mx-auto tracking-wid font-vintage">
             Everything you need to know about VYOM 2025 — all in one place.
           </p>
         </div>
@@ -82,7 +82,7 @@ export function BrochurePage() {
 
           {/* ✅ Brochure Details */}
           <div className="space-y-8 animate-item">
-            <h2 className="text-3xl md:text-4xl font-bold text-amber-400 font-jumanji tracking-wide">
+            <h2 className="text-3xl md:text-4xl font-bold text-red-400 font-stranger tracking-wide">
               ✨ VYOM 2025 ✨
             </h2>
             <p className="text-gray-200 text-lg leading-relaxed">
@@ -118,7 +118,7 @@ export function BrochurePage() {
                   key={index}
                   className="flex items-start hover:scale-105 transition-transform duration-300"
                 >
-                  <Icon className="h-6 w-6 mr-3 text-amber-400 mt-1" />
+                  <Icon className="h-6 w-6 mr-3 text-red-400 mt-1" />
                   <div>
                     <h3 className="text-xl font-bold text-white">{title}</h3>
                     <p className="text-gray-300">{desc}</p>
@@ -133,7 +133,7 @@ export function BrochurePage() {
               download="Brochure.pdf"
               className="no-underline"
             >
-              <Button className="bg-amber-600 hover:bg-amber-500 text-white rounded-full px-8 py-6 text-lg font-bold mt-6 flex items-center shadow-lg hover:scale-105 transition-all">
+              <Button className="bg-red-600 hover:bg-red-500 text-white rounded-full px-8 py-6 text-lg font-bold mt-6 flex items-center shadow-lg hover:scale-105 transition-all">
                 <Download className="mr-2 h-5 w-5" />
                 Download Brochure (PDF)
               </Button>

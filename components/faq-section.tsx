@@ -127,10 +127,10 @@ export function FaqSection() {
     <section ref={sectionRef} className="py-20">
       <div className="container mx-auto px-4">
         <div ref={titleRef} className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-amber-400 font-jumanji mb-6">
+          <h2 className="text-4xl md:text-6xl font-bold text-red-400 font-horror stranger-flicker mb-6">
             FREQUENTLY ASKED QUESTIONS
           </h2>
-          <p className="text-gray-200 max-w-3xl mx-auto text-lg">
+          <p className="text-gray-200 max-w-3xl mx-auto text-lg font-vintage">
             Find answers to common questions about VYOM 2025. If you don't see your question here, feel
             free to contact us.
           </p>
@@ -140,20 +140,20 @@ export function FaqSection() {
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className={`faq-item mb-6 bg-black/60 border border-amber-700/30 rounded-lg overflow-hidden transition-all duration-300 ${openIndex === index ? "shadow-lg shadow-amber-600/20" : ""}`}
+              className={`faq-item mb-6 bg-black/60 border border-red-700/30 rounded-lg overflow-hidden transition-all duration-300  ${openIndex === index ? "shadow-lg shadow-red-600/20" : ""}`}
             >
               <button
                 className="w-full text-left p-6 flex justify-between items-center focus:outline-none"
                 onClick={() => toggleFaq(index)}
               >
-                <h3 className="text-xl font-bold text-amber-300">{faq.question}</h3>
-                <span className="text-amber-400 ml-4">
+                <h3 className="text-xl font-bold text-red-600 font-stranger">{faq.question}</h3>
+                <span className="text-red-400 ml-4">
                   {openIndex === index ? <Minus className="h-5 w-5" /> : <Plus className="h-5 w-5" />}
                 </span>
               </button>
 
               <div className={`faq-answer overflow-hidden h-0 ${openIndex === index ? "opacity-100" : "opacity-0"}`}>
-                <div className="p-6 pt-0 text-gray-200">{faq.answer}</div>
+                <div className="p-6 pt-0 text-gray-200 font-vintage">{faq.answer}</div>
               </div>
             </div>
           ))}

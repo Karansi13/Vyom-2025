@@ -60,10 +60,10 @@ export function SponsorsPreview() {
     <section ref={sectionRef} className="py-16">
       <div className="container mx-auto px-4">
         <div ref={titleRef} className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-amber-400 font-jumanji mb-4">
+          <h2 className="text-3xl md:text-6xl font-bold text-red-400 mb-4 font-horror stranger-flicker">
             OUR SPONSORS
           </h2>
-          <p className="text-gray-300 max-w-2xl mx-auto">
+          <p className="text-gray-300 max-w-2xl mx-auto font-vintage">
             VYOM'25 is made possible by the generous support of our sponsors who
             help bring this adventure to life.
           </p>
@@ -76,7 +76,7 @@ export function SponsorsPreview() {
           {[...Array(8)].map((_, index) => (
             <div
               key={index}
-              className="sponsor-item bg-green-900/50 border border-amber-700/20 rounded-lg p-6 flex items-center justify-center hover:border-amber-500 transition-all duration-300"
+              className="sponsor-item bg-green-900/50 border border-red-700/20 rounded-lg p-6 flex items-center justify-center hover:border-red-500 transition-all duration-300"
             >
               <Image
                 src="/placeholder-logo.svg"
@@ -91,7 +91,7 @@ export function SponsorsPreview() {
 
         <div className="text-center">
           <Link href="/sponsors">
-            <Button className="bg-amber-600 hover:bg-amber-700 text-white">
+            <Button className="bg-red-600 hover:bg-red-500 text-white rounded-full px-8 py-6 text-lg font-bold hover:shadow-lg hover:shadow-red-600/30 transition-all font-nav tracking-widest">
               View All Sponsors
             </Button>
           </Link>

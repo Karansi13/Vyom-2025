@@ -2,10 +2,19 @@ import Image from "next/image";
 
 const Loader = () => {
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-green-950 z-50">
-      <Image src="/Vyom_Logo.png" alt="Loading..." width={400} height={200} />
+    <div className="fixed inset-0 flex items-center justify-center bg-black z-50 w-screen h-screen">
+      <div className="w-full h-full flex items-center justify-center">
+        <Image 
+          src="/vyom.gif" 
+          alt="Loading..." 
+          fill
+          className="object-cover"
+          unoptimized={true}
+          priority={true}
+        />
+      </div>
     </div>
   );
 };
 
-export default Loader;
+export default Loader;

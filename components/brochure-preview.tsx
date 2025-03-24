@@ -72,7 +72,7 @@ export function BrochurePreview() {
       >
         <div className="absolute inset-0 bg-black/70"></div>
         <div className="relative z-10 text-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-amber-400 font-jumanji mb-4">
+          <h1 className="text-5xl md:text-7xl font-bold text-red-400 font-stranger mb-4">
             OFFICIAL BROCHURE
           </h1>
           <p className="text-xl text-white max-w-2xl mx-auto">
@@ -101,7 +101,7 @@ export function BrochurePreview() {
             className="space-y-8 animate-item"
             whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-amber-400 font-jumanji">
+            <h2 className="text-3xl md:text-4xl font-bold text-red-400 font-stranger">
               VYOM 2025
             </h2>
             <p className="text-gray-200 text-lg">
@@ -110,7 +110,7 @@ export function BrochurePreview() {
             </p>
 
             <Button
-              className="bg-amber-600 hover:bg-amber-500 text-white rounded-full px-8 py-6 text-lg font-bold mt-6"
+              className="bg-red-600 hover:bg-red-500 text-white rounded-full px-8 py-6 text-lg font-bold mt-6"
               onClick={() => {
                 const link = document.createElement("a");
                 link.href = "/Brochure.pdf"; // Path to the uploaded file
@@ -125,8 +125,8 @@ export function BrochurePreview() {
         </div>
 
         {/* ✅ Preview Pages with Flip Animation */}
-        {/* <div className="bg-black/60 border border-amber-700/30 rounded-xl p-8 animate-item">
-          <h2 className="text-3xl font-bold text-amber-400 font-jumanji mb-6 text-center">
+        {/* <div className="bg-black/60 border border-red-700/30 rounded-xl p-8 animate-item">
+          <h2 className="text-3xl font-bold text-red-400 font-stranger mb-6 text-center">
             PREVIEW CONTENTS
           </h2>
 

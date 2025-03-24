@@ -34,7 +34,7 @@ export function EventsList({ events }: EventsListProps) {
   if (events.length === 0) {
     return (
       <div className="text-center py-12">
-        <h3 className="text-xl text-amber-400 mb-4">No events found</h3>
+        <h3 className="text-xl text-red-400 mb-4">No events found</h3>
         <p className="text-gray-300">
           Try adjusting your search or filter criteria.
         </p>
@@ -51,14 +51,14 @@ export function EventsList({ events }: EventsListProps) {
             scale: 1.05,
             rotateX: 10,
             rotateY: -10,
-            boxShadow: "0px 10px 20px rgba(255, 200, 50, 0.6)",
+            boxShadow: "0px 5px 15px rgba(200, 0, 0, 0.8)",
           }}
           whileTap={{ scale: 0.95 }} // 🌟 Tilt on click
           transition={{ duration: 0.3, ease: "easeOut" }}
         >
           <Link href={`/events/${event.id}`} onClick={handleCardClick}>
             <Card
-              className={`h-full overflow-hidden bg-green-900/50 border-amber-700/30 hover:border-amber-500 transition-all duration-300 hover:shadow-xl hover:shadow-amber-900/20 ${
+              className={`h-full overflow-hidden bg-black border-red-700/30 hover:border-red-500 transition-all duration-300 hover:shadow-xl hover:shadow-red-900/20 ${
                 hoveredEvent === event.id ? "transform -translate-y-2" : ""
               }`}
               onMouseEnter={() => handleMouseEnter(event.id)}
@@ -69,15 +69,15 @@ export function EventsList({ events }: EventsListProps) {
                   src={event.image || "/placeholder.svg"}
                   alt={event.title}
                   fill
-                  className="object-cover"
+                  className="object-cover h-full w-full"
                 />
-                <div className="absolute top-0 right-0 bg-amber-600 text-white px-3 py-1 text-sm font-bold">
+                <div className="absolute top-0 right-0 bg-red-600 text-white px-3 py-1 text-sm font-bold">
                   {event.category}
                 </div>
               </div>
 
-              <CardContent className="p-6">
-                <h3 className="text-xl font-bold text-amber-400 mb-3">
+              <CardContent className="p-6 font-desc">
+                <h3 className="text-xl font-bold text-red-400 mb-3 font-stranger">
                   {event.title}
                 </h3>
                 <p className="text-gray-300 text-sm mb-4 line-clamp-2">
@@ -86,24 +86,24 @@ export function EventsList({ events }: EventsListProps) {
 
                 <div className="space-y-2 mb-4">
                   <div className="flex items-center text-gray-300 text-sm">
-                    <Calendar className="h-4 w-4 mr-2 text-amber-400" />
+                    <Calendar className="h-4 w-4 mr-2 text-red-400" />
                     <span>{event.date}</span>
                   </div>
-                  <div className="flex items-center text-gray-300 text-sm">
-                    <Clock className="h-4 w-4 mr-2 text-amber-400" />
+                  {/* <div className="flex items-center text-gray-300 text-sm">
+                    <Clock className="h-4 w-4 mr-2 text-red-400" />
                     <span>{event.time}</span>
-                  </div>
+                  </div> */}
                   <div className="flex items-center text-gray-300 text-sm">
-                    <MapPin className="h-4 w-4 mr-2 text-amber-400" />
+                    <MapPin className="h-4 w-4 mr-2 text-red-400" />
                     <span>{event.venue}</span>
                   </div>
                   <div className="flex items-center text-gray-300 text-sm">
-                    <Users className="h-4 w-4 mr-2 text-amber-400" />
+                    <Users className="h-4 w-4 mr-2 text-red-400" />
                     <span>{event.teamSize}</span>
                   </div>
                 </div>
 
-                <Button className="w-full bg-amber-600 hover:bg-amber-700 text-white">
+                <Button className="w-full bg-red-600 hover:bg-red-700 text-white font-nav tracking-widest"> 
                   View Details
                 </Button>
               </CardContent>

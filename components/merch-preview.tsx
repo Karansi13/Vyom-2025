@@ -84,7 +84,7 @@ export function MerchPreview() {
     <section ref={sectionRef} className="py-16 bg-green-950">
       <div className="container mx-auto px-4">
         <div ref={titleRef} className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-amber-400 font-jumanji mb-4">OFFICIAL MERCHANDISE</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-red-400 font-stranger mb-4">OFFICIAL MERCHANDISE</h2>
           <p className="text-gray-300 max-w-2xl mx-auto">
             Take home a piece of the adventure with our exclusive VYOM merchandise. Limited edition items
             available only during the festival.
@@ -95,13 +95,13 @@ export function MerchPreview() {
           {merchItems.map((item, index) => (
             <Card
               key={index}
-              className="merch-card bg-green-900/50 border-amber-700/30 hover:border-amber-500 transition-all duration-300 hover:shadow-xl hover:shadow-amber-900/20"
+              className="merch-card bg-green-900/50 border-red-700/30 hover:border-red-500 transition-all duration-300 hover:shadow-xl hover:shadow-red-900/20"
             >
               <div className="relative h-64 bg-green-800/50">
                 <Image src={item.image || "/placeholder.svg"} alt={item.name} fill className="object-contain p-4" />
               </div>
               <CardContent className="p-6">
-                <h3 className="text-xl font-bold text-amber-300 mb-2">{item.name}</h3>
+                <h3 className="text-xl font-bold text-red-300 mb-2">{item.name}</h3>
                 <p className="text-white font-bold">{item.price}</p>
               </CardContent>
             </Card>
@@ -110,7 +110,7 @@ export function MerchPreview() {
 
         <div className="text-center mt-12">
           <Link href="/merch">
-            <Button className="bg-amber-600 hover:bg-amber-700 text-white">
+            <Button className="bg-red-600 hover:bg-red-700 text-white">
               <ShoppingBag className="mr-2 h-4 w-4" />
               View All Merchandise
             </Button>
