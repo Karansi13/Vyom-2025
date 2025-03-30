@@ -80,12 +80,12 @@ export function EventDetails({ event }: EventDetailsProps) {
               </CardContent>
             </Card>
 
-            <Card className="bg-red-900/50 border-red-700/30 animate-item">
+            {/* <Card className="bg-red-900/50 border-red-700/30 animate-item">
               <CardContent className="p-6">
                 <h2 className="text-2xl font-bold text-red-400 mb-4 font-nav tracking-widest">Rules</h2>
                 <span className="text-gray-300 font-desc text-lg">{event.rules}</span>
               </CardContent>
-            </Card>
+            </Card> */}
 
             <Card className="bg-red-900/50 border-red-700/30 animate-item">
               <CardContent className="p-6">

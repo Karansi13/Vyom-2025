@@ -66,6 +66,17 @@ export function EventsFilter({ initialCategory = "all", initialSearch = "" }: Ev
           <TabsTrigger value="sports" className="data-[state=active]:bg-red-600">
             Sports
           </TabsTrigger>
+          </TabsList>
+          <TabsList className="grid grid-cols-4 mb-4 bg-red-900/50">
+          <TabsTrigger value="esports" className="data-[state=active]:bg-red-600">
+            E-Sports
+          </TabsTrigger>
+          <TabsTrigger value="funevents" className="data-[state=active]:bg-red-600">
+            Fun Events
+          </TabsTrigger>
+          <TabsTrigger value="other" className="data-[state=active]:bg-red-600">
+            OTHER
+          </TabsTrigger>
         </TabsList>
       </Tabs>
 
