@@ -51,62 +51,62 @@ export function EventsFilter({ initialCategory = "all", initialSearch = "" }: Ev
   }
 
   return (
-<div className="mb-8 space-y-4">
-  <Tabs defaultValue={category} onValueChange={handleCategoryChange} className="w-full font-nav tracking-widest">
-    <div className="overflow-x-auto">
-      <TabsList className="flex bg-red-900/50 min-w-max space-x-4 lg:space-x-8 rounded-sm overflow-hidden">
-        <TabsTrigger
-          value="all"
-          className="flex-1 px-8 py-4 text-center text-md font-semibold transition-all duration-300 ease-in-out
+    <div className="mb-8 space-y-4">
+      <Tabs defaultValue={category} onValueChange={handleCategoryChange} className="w-full font-nav tracking-widest">
+        <div className="overflow-x-auto">
+          <TabsList className="flex bg-red-900/50 min-w-max space-x-4 lg:space-x-8 rounded-sm overflow-hidden">
+            <TabsTrigger
+              value="all"
+              className="flex-1 px-8 py-4 text-center text-md font-semibold transition-all duration-300 ease-in-out
             data-[state=active]:bg-red-600 data-[state=active]:text-white data-[state=active]:rounded-lg data-[state=active]:shadow-md"
-        >
-          All
-        </TabsTrigger>
-        <TabsTrigger
-          value="technical"
-          className="flex-1 px-8 py-4 text-center text-md font-semibold transition-all duration-300 ease-in-out
+            >
+              All
+            </TabsTrigger>
+            <TabsTrigger
+              value="technical"
+              className="flex-1 px-8 py-4 text-center text-md font-semibold transition-all duration-300 ease-in-out
             data-[state=active]:bg-red-600 data-[state=active]:text-white data-[state=active]:rounded-lg data-[state=active]:shadow-md"
-        >
-          Technical
-        </TabsTrigger>
-        <TabsTrigger
-          value="cultural"
-          className="flex-1 px-8 py-4 text-center text-md font-semibold transition-all duration-300 ease-in-out
+            >
+              Technical
+            </TabsTrigger>
+            <TabsTrigger
+              value="cultural"
+              className="flex-1 px-8 py-4 text-center text-md font-semibold transition-all duration-300 ease-in-out
             data-[state=active]:bg-red-600 data-[state=active]:text-white data-[state=active]:rounded-lg data-[state=active]:shadow-md"
-        >
-          Cultural
-        </TabsTrigger>
-        <TabsTrigger
-          value="sports"
-          className="flex-1 px-8 py-4 text-center text-md font-semibold transition-all duration-300 ease-in-out
+            >
+              Cultural
+            </TabsTrigger>
+            <TabsTrigger
+              value="sports"
+              className="flex-1 px-8 py-4 text-center text-md font-semibold transition-all duration-300 ease-in-out
             data-[state=active]:bg-red-600 data-[state=active]:text-white data-[state=active]:rounded-lg data-[state=active]:shadow-md"
-        >
-          Sports
-        </TabsTrigger>
-        <TabsTrigger
-          value="esports"
-          className="flex-1 px-8 py-4 text-center text-md font-semibold transition-all duration-300 ease-in-out
+            >
+              Sports
+            </TabsTrigger>
+            <TabsTrigger
+              value="esports"
+              className="flex-1 px-8 py-4 text-center text-md font-semibold transition-all duration-300 ease-in-out
             data-[state=active]:bg-red-600 data-[state=active]:text-white data-[state=active]:rounded-lg data-[state=active]:shadow-md"
-        >
-          E-Sports
-        </TabsTrigger>
-        <TabsTrigger
-          value="funevents"
-          className="flex-1 px-8 py-4 text-center text-md font-semibold transition-all duration-300 ease-in-out
+            >
+              E-Sports
+            </TabsTrigger>
+            <TabsTrigger
+              value="funevents"
+              className="flex-1 px-8 py-4 text-center text-md font-semibold transition-all duration-300 ease-in-out
             data-[state=active]:bg-red-600 data-[state=active]:text-white data-[state=active]:rounded-lg data-[state=active]:shadow-md"
-        >
-          Fun Events
-        </TabsTrigger>
-        <TabsTrigger
-          value="other"
-          className="flex-1 px-8 py-4 text-center text-md font-semibold transition-all duration-300 ease-in-out
+            >
+              Fun Events
+            </TabsTrigger>
+            <TabsTrigger
+              value="other"
+              className="flex-1 px-8 py-4 text-center text-md font-semibold transition-all duration-300 ease-in-out
             data-[state=active]:bg-red-600 data-[state=active]:text-white data-[state=active]:rounded-lg data-[state=active]:shadow-md"
-        >
-          OTHER
-        </TabsTrigger>
-      </TabsList>
-    </div>
-  </Tabs>
+            >
+              OTHER
+            </TabsTrigger>
+          </TabsList>
+        </div>
+      </Tabs>
 
 
 
