@@ -53,7 +53,7 @@ export function EventsFilter({ initialCategory = "all", initialSearch = "" }: Ev
   return (
     <div className="mb-8 space-y-4">
       <Tabs defaultValue={category} onValueChange={handleCategoryChange} className="w-full font-nav tracking-widest">
-        <TabsList className="grid grid-cols-4 mb-4 bg-red-900/50">
+        <TabsList className="grid grid-cols-7 bg-red-900/50">
           <TabsTrigger value="all" className="data-[state=active]:bg-red-600">
             All
           </TabsTrigger>
@@ -66,8 +66,6 @@ export function EventsFilter({ initialCategory = "all", initialSearch = "" }: Ev
           <TabsTrigger value="sports" className="data-[state=active]:bg-red-600">
             Sports
           </TabsTrigger>
-          </TabsList>
-          <TabsList className="grid grid-cols-4 mb-4 bg-red-900/50">
           <TabsTrigger value="esports" className="data-[state=active]:bg-red-600">
             E-Sports
           </TabsTrigger>
