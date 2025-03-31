@@ -151,7 +151,7 @@ export function EventDetails({ event }: EventDetailsProps) {
 
 
               </div>
-              <a href="https://forms.gle/nBmvNreAnNQcAmAY7" target="_blank">
+              <a href={event.registrationLink} target="_blank">
                 <Button
                   className="w-full bg-red-600 hover:bg-red-700 text-white font-nav tracking-widest text-xl stranger-flicker"
                   onClick={handleRegister}
