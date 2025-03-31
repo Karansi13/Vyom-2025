@@ -53,29 +53,31 @@ export function EventsFilter({ initialCategory = "all", initialSearch = "" }: Ev
   return (
     <div className="mb-8 space-y-4">
       <Tabs defaultValue={category} onValueChange={handleCategoryChange} className="w-full font-nav tracking-widest">
-        <TabsList className="grid grid-cols-7 bg-red-900/50">
-          <TabsTrigger value="all" className="data-[state=active]:bg-red-600">
-            All
-          </TabsTrigger>
-          <TabsTrigger value="technical" className="data-[state=active]:bg-red-600">
-            Technical
-          </TabsTrigger>
-          <TabsTrigger value="cultural" className="data-[state=active]:bg-red-600">
-            Cultural
-          </TabsTrigger>
-          <TabsTrigger value="sports" className="data-[state=active]:bg-red-600">
-            Sports
-          </TabsTrigger>
-          <TabsTrigger value="esports" className="data-[state=active]:bg-red-600">
-            E-Sports
-          </TabsTrigger>
-          <TabsTrigger value="funevents" className="data-[state=active]:bg-red-600">
-            Fun Events
-          </TabsTrigger>
-          <TabsTrigger value="other" className="data-[state=active]:bg-red-600">
-            OTHER
-          </TabsTrigger>
-        </TabsList>
+        <div className="overflow-x-auto ">
+          <TabsList className="flex lg:space-x-[8rem] bg-red-900/50 min-w-max">
+            <TabsTrigger value="all" className="flex-shrink-0 px-4 py-2 text-center text-sm font-semibold transition-all duration-300 ease-in-out data-[state=active]:bg-red-600">
+              All
+            </TabsTrigger>
+            <TabsTrigger value="technical" className="flex-shrink-0 px-4 py-2 text-center text-sm font-semibold transition-all duration-300 ease-in-out data-[state=active]:bg-red-600">
+              Technical
+            </TabsTrigger>
+            <TabsTrigger value="cultural" className="flex-shrink-0 px-4 py-2 text-center text-sm font-semibold transition-all duration-300 ease-in-out data-[state=active]:bg-red-600">
+              Cultural
+            </TabsTrigger>
+            <TabsTrigger value="sports" className="flex-shrink-0 px-4 py-2 text-center text-sm font-semibold transition-all duration-300 ease-in-out data-[state=active]:bg-red-600">
+              Sports
+            </TabsTrigger>
+            <TabsTrigger value="esports" className="flex-shrink-0 px-4 py-2 text-center text-sm font-semibold transition-all duration-300 ease-in-out data-[state=active]:bg-red-600">
+              E-Sports
+            </TabsTrigger>
+            <TabsTrigger value="funevents" className="flex-shrink-0 px-4 py-2 text-center text-sm font-semibold transition-all duration-300 ease-in-out data-[state=active]:bg-red-600">
+              Fun Events
+            </TabsTrigger>
+            <TabsTrigger value="other" className="flex-shrink-0 px-4 py-2 text-center text-sm font-semibold transition-all duration-300 ease-in-out data-[state=active]:bg-red-600">
+              OTHER
+            </TabsTrigger>
+          </TabsList>
+        </div>
       </Tabs>
 
       <div className="relative">
